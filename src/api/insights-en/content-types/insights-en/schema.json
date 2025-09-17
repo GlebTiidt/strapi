@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "insights_ens",
+  "info": {
+    "singularName": "insights-en",
+    "pluralName": "insights-ens",
+    "displayName": "Insights (En)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "date_for_view": {
+      "type": "string"
+    },
+    "date_for_sort": {
+      "type": "date"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "tendency_1": {
+      "type": "richtext"
+    },
+    "tendency_2": {
+      "type": "richtext"
+    },
+    "tendency_3": {
+      "type": "richtext"
+    },
+    "tendency_4": {
+      "type": "richtext"
+    },
+    "tendency_5": {
+      "type": "richtext"
+    },
+    "tendency_6": {
+      "type": "richtext"
+    },
+    "tendency_7": {
+      "type": "richtext"
+    },
+    "tendency_8": {
+      "type": "richtext"
+    },
+    "tendency_9": {
+      "type": "richtext"
+    },
+    "tendency_10": {
+      "type": "richtext"
+    }
+  }
+}

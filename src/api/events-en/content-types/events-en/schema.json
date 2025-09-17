@@ -1,0 +1,133 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events_ens",
+  "info": {
+    "singularName": "events-en",
+    "pluralName": "events-ens",
+    "displayName": "Events (En)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "main_image_on_the_page": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "date": {
+      "type": "string"
+    },
+    "date_on_page": {
+      "type": "string"
+    },
+    "date_for_sort": {
+      "type": "date"
+    },
+    "locate": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "show": {
+      "type": "boolean"
+    },
+    "block": {
+      "type": "boolean"
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "video": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "first_words": {
+      "type": "richtext"
+    },
+    "session_1_heading": {
+      "type": "richtext"
+    },
+    "session_1_moderator": {
+      "type": "string"
+    },
+    "session_1_participants": {
+      "type": "richtext"
+    },
+    "brake_1": {
+      "type": "richtext"
+    },
+    "session_2_heading": {
+      "type": "richtext"
+    },
+    "session_2_moderator": {
+      "type": "string"
+    },
+    "session_2_participants": {
+      "type": "richtext"
+    },
+    "brake_2": {
+      "type": "richtext"
+    },
+    "session_3_heading": {
+      "type": "richtext"
+    },
+    "session_3_moderator": {
+      "type": "string"
+    },
+    "session_3_participants": {
+      "type": "richtext"
+    },
+    "brake_3": {
+      "type": "richtext"
+    },
+    "session_4_heading": {
+      "type": "richtext"
+    },
+    "session_4_moderator": {
+      "type": "string"
+    },
+    "session_4_participants": {
+      "type": "richtext"
+    },
+    "brake_4": {
+      "type": "richtext"
+    },
+    "registration": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "publications_rus",
+  "info": {
+    "singularName": "publications-ru",
+    "pluralName": "publications-rus",
+    "displayName": "Publications (Ru)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name_date": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name_date"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "featured_title": {
+      "type": "string"
+    },
+    "date_for_sort": {
+      "type": "date"
+    },
+    "source": {
+      "type": "string"
+    },
+    "news_description": {
+      "type": "text"
+    },
+    "link": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

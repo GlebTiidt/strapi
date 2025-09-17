@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team_ens",
+  "info": {
+    "singularName": "team-en",
+    "pluralName": "team-ens",
+    "displayName": "Team (En)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "sorting": {
+      "type": "integer"
+    },
+    "position": {
+      "type": "string"
+    },
+    "sub_position": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "url_linkedin": {
+      "type": "text"
+    },
+    "team_ru": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::team.team",
+      "inversedBy": "team_en"
+    }
+  }
+}

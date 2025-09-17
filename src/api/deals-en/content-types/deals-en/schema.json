@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deals_ens",
+  "info": {
+    "singularName": "deals-en",
+    "pluralName": "deals-ens",
+    "displayName": "Deals (En)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "company_1_logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "company_2_logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "company_3_logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "deals_ru": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::deals-ru.deals-ru",
+      "inversedBy": "deals_en"
+    }
+  }
+}

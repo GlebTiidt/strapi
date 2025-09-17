@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "publications_ens",
+  "info": {
+    "singularName": "publications-en",
+    "pluralName": "publications-ens",
+    "displayName": "Publications (En)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name_date": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name_date"
+    },
+    "date_for_sort": {
+      "type": "date"
+    },
+    "source": {
+      "type": "string"
+    },
+    "news_description": {
+      "type": "text"
+    },
+    "link": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "news_ens",
+  "info": {
+    "singularName": "news-en",
+    "pluralName": "news-ens",
+    "displayName": "News (En)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "publication_date": {
+      "type": "date"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "image_mobile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "news_ru": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::news-ru.news-ru",
+      "mappedBy": "news_en"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "news_rus",
+  "info": {
+    "singularName": "news-ru",
+    "pluralName": "news-rus",
+    "displayName": "News (Ru)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "publication_date": {
+      "type": "date"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "image_mobile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "news_en": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::news-en.news-en",
+      "inversedBy": "news_ru"
+    }
+  }
+}

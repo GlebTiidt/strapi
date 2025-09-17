@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vacancies",
+  "info": {
+    "singularName": "vacancy",
+    "pluralName": "vacancies",
+    "displayName": "Vacancy"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "name_en": {
+      "type": "string"
+    },
+    "subtitle_en": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "city_and_format": {
+      "type": "string"
+    },
+    "city_and_format_en": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "description_en": {
+      "type": "richtext"
+    },
+    "show_on_page": {
+      "type": "boolean"
+    }
+  }
+}
