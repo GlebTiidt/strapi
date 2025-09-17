@@ -1,0 +1,5 @@
+[2025-09-17 19:32:46.297] error: [ERROR] write EPIPE
+[2025-09-17 19:32:46.317] error: [FATAL] [Data transfer] Error in assets read stream: write EPIPE
+[2025-09-17 19:32:46.376] error: [ERROR] WebSocket is not open: readyState 3 (CLOSED)
+[2025-09-17 19:32:46.388] error: [ERROR] WebSocket is not open: readyState 3 (CLOSED)
+[2025-09-17 19:32:46.400] error: [FATAL] WebSocket is not open: readyState 3 (CLOSED)
