@@ -2,6 +2,7 @@
 
 module.exports = ({ env }) => {
   const enableCloud = env.bool('ENABLE_CLOUD_PLUGIN', false);
+  const enableTransfer = env.bool('ENABLE_TRANSFER_PLUGIN', false);
 
   const hasCloudinary =
     !!env('CLOUDINARY_CLOUD_NAME') &&
@@ -11,8 +12,8 @@ module.exports = ({ env }) => {
   return {
     ...(enableCloud && { cloud: { enabled: true } }),
 
-    // ВКЛЮЧАЕМ серверный Data Transfer на приём
-    transfer: { enabled: true },
+    // включаем ТОЛЬКО когда явно задано ENABLE_TRANSFER_PLUGIN=true (в облаке)
+    ...(enableTransfer && { transfer: { enabled: true } }),
 
     ...(hasCloudinary && {
       upload: {
