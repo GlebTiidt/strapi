@@ -1,15 +1,24 @@
 'use strict';
 
 module.exports = ({ env }) => {
-  // ВКЛЮЧАЕМ cloud только там, где явно задан флаг (в Strapi Cloud)
   const enableCloud = env.bool('ENABLE_CLOUD_PLUGIN', false);
-
   const hasCloudinary =
     !!env('CLOUDINARY_CLOUD_NAME') &&
     !!env('CLOUDINARY_API_KEY') &&
     !!env('CLOUDINARY_API_SECRET');
 
   return {
+    // GraphQL
+    graphql: {
+      enabled: true,
+      config: {
+        endpoint: '/graphql',
+        shadowCRUD: true,
+        playgroundAlways: true,         // включить Playground в проде
+        apolloServer: { introspection: true }, // и introspection
+      },
+    },
+
     ...(enableCloud && { cloud: { enabled: true } }),
 
     ...(hasCloudinary && {
