@@ -1,10 +1,8 @@
 'use strict';
 
 module.exports = ({ env }) => {
-  // Включаем cloud-плагин ТОЛЬКО если в окружении стоит флаг
   const enableCloud = env.bool('ENABLE_CLOUD_PLUGIN', false);
 
-  // Включаем Cloudinary ТОЛЬКО если заданы все ключи
   const hasCloudinary =
     !!env('CLOUDINARY_CLOUD_NAME') &&
     !!env('CLOUDINARY_API_KEY') &&
@@ -12,6 +10,10 @@ module.exports = ({ env }) => {
 
   return {
     ...(enableCloud && { cloud: { enabled: true } }),
+
+    // ВКЛЮЧАЕМ серверный Data Transfer на приём
+    transfer: { enabled: true },
+
     ...(hasCloudinary && {
       upload: {
         config: {
