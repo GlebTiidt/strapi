@@ -6,3 +6,5 @@ dist/
 public/uploads/
 .env*
 .DS_Store
+
+.strapi/client
